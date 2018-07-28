@@ -44,6 +44,7 @@ local.properties
 *.user
 *.sln.docstates
 .vscode/*
+*.stackdump
 # Build results
 
 [Dd]ebug/

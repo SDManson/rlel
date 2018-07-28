@@ -12,8 +12,8 @@ class MainWindow(wx.Frame):
 		self.eve_path.TextCtrl.Size=wx.Size(240,23)
 		self.eve_path.PickerCtrl.Position=wx.Point(240,0)
 		self.eve_path.PickerCtrl.Size=wx.Size(70,23)
-		#self.singularity_radio = wx.CheckBox(self, wx.ID_ANY, pos=wx.Point(242, 12), label="Singularity")
-		self.account_box = wx.ListBox(self, wx.ID_ANY, pos=wx.Point(12, 70), size=wx.Size(300,280),
+		self.singularity_radio = wx.CheckBox(self, wx.ID_ANY, pos=wx.Point(324, 15), label="Singularity")
+		self.account_box = wx.ListBox(self, wx.ID_ANY, pos=wx.Point(12, 48), size=wx.Size(300,280),
 			choices=["character", "select", "goes", "here"],
 			style=wx.LB_MULTIPLE)
 		self.launch_button = wx.Button(self, wx.ID_ANY, "Launch", size=wx.Size(88,23), pos=wx.Point(318,48))
@@ -22,6 +22,7 @@ class MainWindow(wx.Frame):
 		self.SetIcon(wx.Icon('rlel.ico'))
 		self.Bind(wx.EVT_BUTTON, self.remove_char, id=self.remove_char_button.GetId())
 		self.eve_path.SetPath(self.get_tranq_path())
+		self.SetFocus()
 		self.Show(True)
 
 	def remove_char(self, event):
